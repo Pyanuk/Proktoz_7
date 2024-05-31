@@ -1,0 +1,57 @@
+﻿<Window x:Class="MessengerPR7.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MessengerPR7"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="300" MinWidth="400" Background="Transparent">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            Grid.Row="0" Grid.ColumnSpan="2"
+            HorizontalAlignment="Center" VerticalAlignment="Center"
+            FontSize="22"
+            Text="Inkognito Chad" Foreground="BlueViolet" Margin="5"/>
+
+        <Button x:Name="Create" 
+                Grid.Row="1" Grid.ColumnSpan="2"
+                Margin="5"
+                FontSize="18" 
+                Content="Create new chat" Background="BlueViolet" Foreground="Black"
+                Click="Create_Click" />
+
+        <Button x:Name="Connect" 
+                Grid.Row="2" Grid.ColumnSpan="2"
+                Margin="5"
+                FontSize="18" 
+                Content="Join chat" Background="BlueViolet" Foreground="Black"
+                Click="Connect_Click" />
+
+        <TextBox x:Name="IP" 
+                 Grid.Row="3" Grid.ColumnSpan="2"
+                 Margin="5"
+                 FontSize="18" 
+                 Background="BlueViolet" Foreground="Black"
+                 materialDesign:HintAssist.Hint="IP address" />
+
+        <TextBox x:Name="Name" 
+                 Grid.Row="4" Grid.ColumnSpan="2"
+                 Margin="5"
+                 FontSize="18" 
+                 Background="BlueViolet" Foreground="Black"
+                 materialDesign:HintAssist.Hint="Enter a name" />
+    </Grid>
+</Window>
